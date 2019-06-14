@@ -8,7 +8,9 @@
     "pm2-service-uninstall": "bin/pm2-service-uninstall"
   },
   "scripts": {
-    "test": "node test/integration.js"
+    "test": "node test/integration.js",
+    "setup":"node bin/pm2-service-install -n PM2-startup",
+    "remove":"node bin/pm2-service-uninstall -n PM2-startup"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,7 @@
     "co-event": "^0.1.0",
     "del": "^2.1.0",
     "fs-extra": "^4.0.2",
-    "inquirer": "^1.1.2",
+    "inquirer": "^6.3.1",
     "is-admin": "^1.0.2",
     "node-windows": "^0.1.10",
     "promisify-node": "^0.3.0",
